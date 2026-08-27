@@ -4,73 +4,73 @@ import { LicenseBadge } from "@/components/license-badge";
 import { TagPill } from "@/components/tag-pill";
 import { ProjectCard } from "@/components/project-card";
 import { NotebookEntryPreview } from "@/components/notebook-entry-preview";
-import type { Project, NotebookEntry, ProjectStatus } from "@/lib/content-types";
+import type { ProjectMeta, ProjectStatus } from "@/lib/content-types";
 
 const STATUSES: ProjectStatus[] = ["Active", "WIP", "Shelved", "Archived"];
 
-const PROJECTS: Project[] = [
+const PROJECTS: ProjectMeta[] = [
   {
     slug: "project-alpha",
-    name: "Project Alpha",
+    title: "Project Alpha",
     status: "Active",
     license: "MIT",
-    blurb:
+    repoUrl: "https://github.com/example/project-alpha",
+    summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    tech: ["Python", "OpenCV", "SocketCAN"],
+    techTags: ["Python", "OpenCV", "SocketCAN"],
   },
   {
     slug: "project-beta",
-    name: "Project Beta",
+    title: "Project Beta",
     status: "WIP",
     license: "MIT",
-    blurb:
+    repoUrl: "https://github.com/example/project-beta",
+    summary:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    tech: ["C", "SDL2", "Assembly"],
+    techTags: ["C", "SDL2", "Assembly"],
   },
   {
     slug: "project-gamma",
-    name: "Project Gamma",
+    title: "Project Gamma",
     status: "Shelved",
     license: "Apache-2.0",
-    blurb:
+    repoUrl: "https://github.com/example/project-gamma",
+    summary:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    tech: ["Flex PCB", "STM32"],
+    techTags: ["Flex PCB", "STM32"],
   },
   {
     slug: "project-delta",
-    name: "Project Delta",
+    title: "Project Delta",
     status: "Archived",
     license: "MIT",
-    blurb:
+    repoUrl: "https://github.com/example/project-delta",
+    summary:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.",
-    tech: ["MuJoCo", "PyTorch"],
+    techTags: ["MuJoCo", "PyTorch"],
   },
 ];
 
-const ENTRIES: NotebookEntry[] = [
+const ENTRIES = [
   {
     slug: "entry-one",
     date: "2026-08-21",
-    project: "Project Alpha",
-    tag: "Timing",
+    projectLabel: "Project Alpha",
     title: "Lorem ipsum dolor sit amet consectetur",
-    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa.",
-    body2:
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
     excerpt:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    contentHtml:
+      "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa.</p><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.</p>",
   },
   {
     slug: "entry-two",
     date: "2026-08-09",
-    project: "Project Beta",
-    tag: "Rendering",
+    projectLabel: "Project Beta",
     title: "Ut enim ad minim veniam quis nostrud",
-    body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
-    body2:
-      "Et harum quidem rerum facilis est et expedita distinctio, nam libero tempore cum soluta nobis est eligendi optio.",
     excerpt:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+    contentHtml:
+      "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p><p>Et harum quidem rerum facilis est et expedita distinctio, nam libero tempore cum soluta nobis est eligendi optio.</p>",
   },
 ];
 
@@ -175,7 +175,14 @@ export default function DevComponentsPage() {
       <Section title="NotebookEntryPreview — teaser">
         <div className="border-t border-border">
           {ENTRIES.map((e) => (
-            <NotebookEntryPreview key={e.slug} entry={e} variant="teaser" />
+            <NotebookEntryPreview
+              key={e.slug}
+              variant="teaser"
+              date={e.date}
+              projectLabel={e.projectLabel}
+              title={e.title}
+              excerpt={e.excerpt}
+            />
           ))}
         </div>
       </Section>
@@ -183,7 +190,14 @@ export default function DevComponentsPage() {
       <Section title="NotebookEntryPreview — full">
         <div className="border-t border-border">
           {ENTRIES.map((e) => (
-            <NotebookEntryPreview key={e.slug} entry={e} variant="full" />
+            <NotebookEntryPreview
+              key={e.slug}
+              variant="full"
+              date={e.date}
+              projectLabel={e.projectLabel}
+              title={e.title}
+              contentHtml={e.contentHtml}
+            />
           ))}
         </div>
       </Section>

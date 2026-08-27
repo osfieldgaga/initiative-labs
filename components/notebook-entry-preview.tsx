@@ -1,39 +1,47 @@
 import Link from "next/link";
-import type { NotebookEntry } from "@/lib/content-types";
 
-export function NotebookEntryPreview({
-  entry,
-  variant = "teaser",
-}: {
-  entry: NotebookEntry;
-  variant?: "teaser" | "full";
-}) {
-  if (variant === "full") {
+/**
+ * Presentational only — doesn't take the raw NotebookEntry content type
+ * directly, since `projectTag` is a slug and this needs the resolved
+ * project title. Callers (page components) look that up via
+ * getProjectBySlug and pass it in as `projectLabel`.
+ */
+type NotebookEntryPreviewProps =
+  | {
+      variant?: "teaser";
+      date: string;
+      projectLabel: string;
+      title: string;
+      excerpt: string;
+    }
+  | {
+      variant: "full";
+      date: string;
+      projectLabel: string;
+      title: string;
+      contentHtml: string;
+    };
+
+export function NotebookEntryPreview(props: NotebookEntryPreviewProps) {
+  if (props.variant === "full") {
     return (
       <div className="grid grid-cols-1 gap-8 border-b border-border py-11 sm:grid-cols-[170px_1fr] sm:gap-12">
         <div>
           <div className="font-mono text-xs tracking-[0.06em] text-fg">
-            {entry.date}
+            {props.date}
           </div>
           <div className="mt-3 font-mono text-label uppercase tracking-[0.14em] text-accent">
-            {entry.project}
-          </div>
-          <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em] text-fg-faint">
-            {entry.tag}
+            {props.projectLabel}
           </div>
         </div>
-        <div className="max-w-[74ch]">
-          <h2 className="text-2xl font-medium leading-tight tracking-[-0.025em]">
-            {entry.title}
+        <div
+          className="max-w-[74ch] text-base leading-relaxed text-fg-body [&_h3]:mb-2 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-fg [&_li]:ml-5 [&_li]:list-disc [&_p]:mb-3.5"
+        >
+          <h2 className="mb-4 text-2xl font-medium leading-tight tracking-[-0.025em] text-fg">
+            {props.title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-fg-body">
-            {entry.body}
-          </p>
-          {entry.body2 && (
-            <p className="mt-3.5 text-base leading-relaxed text-fg-muted">
-              {entry.body2}
-            </p>
-          )}
+          {/* Content is repo-authored markdown, not user input — safe to render directly. */}
+          <div dangerouslySetInnerHTML={{ __html: props.contentHtml }} />
         </div>
       </div>
     );
@@ -45,17 +53,17 @@ export function NotebookEntryPreview({
       className="grid grid-cols-1 items-baseline gap-6 border-b border-border py-8 transition-colors hover:bg-bg-raised sm:grid-cols-[150px_190px_1fr] sm:gap-8"
     >
       <div className="font-mono text-xs tracking-[0.06em] text-fg-muted">
-        {entry.date}
+        {props.date}
       </div>
       <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
-        {entry.project}
+        {props.projectLabel}
       </div>
       <div>
         <div className="text-xl font-medium tracking-[-0.02em] text-fg">
-          {entry.title}
+          {props.title}
         </div>
         <p className="mt-2.5 max-w-[70ch] text-[15px] leading-relaxed text-fg-muted">
-          {entry.excerpt ?? entry.body}
+          {props.excerpt}
         </p>
       </div>
     </Link>

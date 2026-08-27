@@ -2,13 +2,13 @@ import Link from "next/link";
 import { StatusBadge } from "./status-badge";
 import { LicenseBadge } from "./license-badge";
 import { TagPill } from "./tag-pill";
-import type { Project } from "@/lib/content-types";
+import type { ProjectMeta } from "@/lib/content-types";
 
 export function ProjectCard({
   project,
   variant = "grid",
 }: {
-  project: Project;
+  project: ProjectMeta;
   variant?: "grid" | "list";
 }) {
   if (variant === "list") {
@@ -23,14 +23,14 @@ export function ProjectCard({
             <LicenseBadge license={project.license} />
           </div>
           <div className="mt-5 text-3xl font-medium tracking-[-0.025em] text-fg">
-            {project.name}
+            {project.title}
           </div>
           <p className="mt-3 max-w-[52ch] text-base leading-relaxed text-fg-muted">
-            {project.blurb}
+            {project.summary}
           </p>
         </div>
         <div className="flex flex-wrap gap-2 pt-1">
-          {project.tech.map((t) => (
+          {project.techTags.map((t) => (
             <TagPill key={t}>{t}</TagPill>
           ))}
         </div>
@@ -51,14 +51,14 @@ export function ProjectCard({
         <LicenseBadge license={project.license} />
       </div>
       <div className="mt-[30px] text-[27px] font-medium tracking-[-0.025em] text-fg">
-        {project.name}
+        {project.title}
       </div>
       <p className="mt-3.5 max-w-[44ch] text-[15px] leading-relaxed text-fg-muted">
-        {project.blurb}
+        {project.summary}
       </p>
       <div className="flex-1" />
       <div className="mt-7 flex flex-wrap gap-2 border-t border-border pt-[18px]">
-        {project.tech.map((t) => (
+        {project.techTags.map((t) => (
           <TagPill key={t}>{t}</TagPill>
         ))}
       </div>
