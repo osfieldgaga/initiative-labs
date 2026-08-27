@@ -44,7 +44,7 @@ export function ProjectCard({
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="flex min-h-[300px] flex-col bg-bg px-9 pb-[34px] pt-[38px] transition-colors hover:bg-bg-raised"
+      className="flex min-h-[300px] flex-col border-r-2 border-b-2 border-border bg-bg px-9 pb-[34px] pt-[38px] transition-colors hover:bg-bg-raised"
     >
       <div className="flex items-center justify-between gap-4">
         <StatusBadge status={project.status} />

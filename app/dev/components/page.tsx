@@ -157,7 +157,7 @@ export default function DevComponentsPage() {
       </Section>
 
       <Section title="ProjectCard — grid">
-        <div className="grid grid-cols-1 gap-[2px] bg-border sm:grid-cols-2">
+        <div className="grid grid-cols-1 border-l-2 border-t-2 border-border sm:grid-cols-2">
           {PROJECTS.map((p) => (
             <ProjectCard key={p.slug} project={p} variant="grid" />
           ))}
