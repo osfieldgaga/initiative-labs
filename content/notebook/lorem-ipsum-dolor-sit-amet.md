@@ -1,7 +1,7 @@
 ---
 title: "Lorem ipsum dolor sit amet consectetur"
 date: "2026-08-20"
-projectTag: "lorem-ipsum-rover"
+projectTag: "road-logger"
 slug: "lorem-ipsum-dolor-sit-amet"
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: "Lorem Ipsum Rover"
-slug: "lorem-ipsum-rover"
+title: "Road Logger"
+slug: "road-logger"
 status: "Active"
 license: "MIT"
 techTags: ["Python", "OpenCV", "SocketCAN"]
 repoUrl: "https://github.com/example/lorem-ipsum-rover"
 docsUrl: "https://example.com/docs/lorem-ipsum-rover"
-summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+summary: "A Raspberry Pi-based logger to record data for tuning self-driving control algorithm"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

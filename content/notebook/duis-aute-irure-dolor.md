@@ -1,7 +1,7 @@
 ---
 title: "Duis aute irure dolor in reprehenderit"
 date: "2026-07-15"
-projectTag: "lorem-ipsum-rover"
+projectTag: "road-logger"
 slug: "duis-aute-irure-dolor"
 ---
 
