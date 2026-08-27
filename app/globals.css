@@ -15,8 +15,8 @@
   --color-fg: #fbfbfb;
   --color-fg-body: #c8c8c8;
   --color-fg-muted: #878787;
-  --color-fg-faint: #6a6a6f;
-  --color-fg-archived: #5a5a5f;
+  --color-fg-subtle: #6a6a6f;
+  --color-fg-faint: #5a5a5f;
 
   --color-accent: #f56e0f;
 
@@ -72,25 +72,27 @@
      Use the default `rounded-none` utility rather than adding one. */
 }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-fg);
-}
+@layer base {
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
 
-a {
-  color: var(--color-accent);
-}
+  a {
+    color: var(--color-accent);
+  }
 
-a:hover {
-  color: var(--color-fg);
-}
+  a:hover {
+    color: var(--color-fg);
+  }
 
-::selection {
-  background: var(--color-accent);
-  color: var(--color-bg);
-}
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
 
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
 }
