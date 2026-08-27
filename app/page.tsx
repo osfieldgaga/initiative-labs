@@ -5,9 +5,7 @@ import { NotebookEntryPreview } from "@/components/notebook-entry-preview";
 import { MediaPlaceholder } from "@/components/media-placeholder";
 import { getAllNotebookEntries, getAllProjects, getProjectBySlug } from "@/lib/content";
 import { copy } from "@/lib/copy";
-
-const GITHUB_URL = "https://github.com/osfieldgaga";
-const EMAIL = "osfield@initiativelabs.cc";
+import { EMAIL, GITHUB_URL } from "@/lib/site";
 
 function SectionHeader({
   eyebrow,

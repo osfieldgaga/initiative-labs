@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Wordmark } from "./wordmark";
+import { GITHUB_URL } from "@/lib/site";
 
 const NAV_ITEMS = [
   { href: "/projects", label: "Projects" },
@@ -40,7 +41,7 @@ export function Nav() {
             );
           })}
           <a
-            href="https://github.com/osfieldgaga"
+            href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
             className="block bg-accent px-4 py-[11px] font-mono text-label uppercase tracking-[0.14em] text-bg transition-colors hover:bg-fg"

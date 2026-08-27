@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Wordmark } from "./wordmark";
+import { EMAIL, GITHUB_URL } from "@/lib/site";
 
 const SITE_LINKS = [
   { href: "/projects", label: "Projects" },
   { href: "/notebook", label: "Lab notebook" },
   { href: "/about", label: "About" },
+  { href: "/contribute", label: "Contribute" },
 ];
 
 export function Footer() {
@@ -40,7 +42,7 @@ export function Footer() {
           </div>
           <div className="mt-4 flex flex-col gap-2.5">
             <a
-              href="https://github.com/osfieldgaga"
+              href={GITHUB_URL}
               target="_blank"
               rel="noreferrer"
               className="text-sm text-fg-muted hover:text-accent"
@@ -48,10 +50,10 @@ export function Footer() {
               GitHub
             </a>
             <a
-              href="mailto:osfield@initiativelabs.cc"
+              href={`mailto:${EMAIL}`}
               className="text-sm text-fg-muted hover:text-accent"
             >
-              osfield@initiativelabs.cc
+              {EMAIL}
             </a>
           </div>
         </div>

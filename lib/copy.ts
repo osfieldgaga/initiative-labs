@@ -47,19 +47,44 @@ export const copy = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt, ut labore et dolore magna aliqua.",
   },
   about: {
-    missionBlurb:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    manifestoBody: [
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
-    ],
-  },
-  contribute: {
-    instructions: [
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
-      "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam.",
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
-    ],
+    eyebrow: "Manifesto",
+    headline:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+    mission: {
+      label: "Mission",
+      paragraphs: [
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor.",
+        "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      ],
+    },
+    throughline: {
+      label: "The throughline",
+      paragraphs: [
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo.",
+        "Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo, nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      ],
+    },
+    howItWorks: {
+      label: "How this site works",
+      items: [
+        {
+          title: "Lorem ipsum dolor sit amet",
+          body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        },
+        {
+          title: "Ut enim ad minima veniam",
+          body: "Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+        },
+        {
+          title: "Neque porro quisquam est",
+          body: "Qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora.",
+        },
+        {
+          title: "At vero eos et accusamus",
+          body: "Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
+        },
+      ],
+    },
+    closingHeadline: "Lorem ipsum dolor sit amet, consectetur.",
   },
 } as const;
