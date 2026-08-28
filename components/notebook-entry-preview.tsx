@@ -59,9 +59,9 @@ export function NotebookEntryPreview(props: NotebookEntryPreviewProps) {
         {props.projectLabel}
       </div>
       <div>
-        <div className="text-xl font-medium tracking-[-0.02em] text-fg">
+        <h3 className="text-xl font-medium tracking-[-0.02em] text-fg">
           {props.title}
-        </div>
+        </h3>
         <p className="mt-2.5 max-w-[70ch] text-[15px] leading-relaxed text-fg-muted">
           {props.excerpt}
         </p>

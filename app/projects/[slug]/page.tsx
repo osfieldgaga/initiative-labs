@@ -68,9 +68,9 @@ export default async function ProjectDetailPage({
       <div className="mx-auto w-full max-w-content px-content-x pt-[100px]">
         <div className="grid grid-cols-1 items-start gap-[90px] lg:grid-cols-[1.55fr_1fr]">
           <div>
-            <div className="border-t-2 border-accent pt-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
+            <h2 className="border-t-2 border-accent pt-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
               What it does
-            </div>
+            </h2>
             {/* Content is repo-authored markdown, not user input — safe to render directly. */}
             <div
               className="mt-6 max-w-[70ch] text-[17px] leading-relaxed text-fg-body [&_h3]:mb-2 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-fg [&_li]:ml-5 [&_li]:list-disc [&_p]:mb-4"
@@ -79,18 +79,18 @@ export default async function ProjectDetailPage({
           </div>
 
           <div>
-            <div className="border-t-2 border-border pt-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-fg-muted">
+            <h2 className="border-t-2 border-border pt-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-fg-muted">
               Stack
-            </div>
+            </h2>
             <div className="mt-6 flex flex-wrap gap-2">
               {project.techTags.map((tag) => (
                 <TagPill key={tag}>{tag}</TagPill>
               ))}
             </div>
 
-            <div className="mt-12 border-t-2 border-border pt-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-fg-muted">
+            <h2 className="mt-12 border-t-2 border-border pt-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-fg-muted">
               License
-            </div>
+            </h2>
             <div className="mt-6 border-2 border-border p-6">
               <div className="text-xl font-medium tracking-[-0.015em]">
                 {project.license}
@@ -126,9 +126,9 @@ export default async function ProjectDetailPage({
                 <div className="font-mono text-xs text-fg-muted">
                   {entry.date}
                 </div>
-                <div className="text-lg font-medium tracking-[-0.015em] text-fg">
+                <h3 className="text-lg font-medium tracking-[-0.015em] text-fg">
                   {entry.title}
-                </div>
+                </h3>
               </Link>
             ))
           ) : (

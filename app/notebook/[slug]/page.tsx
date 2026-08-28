@@ -54,7 +54,7 @@ export default async function NotebookEntryDetailPage({
       <div className="mx-auto w-full max-w-content px-content-x pb-[120px]">
         {/* Content is repo-authored markdown, not user input — safe to render directly. */}
         <div
-          className="max-w-[74ch] border-t-2 border-border pt-10 text-base leading-relaxed text-fg-body [&_h3]:mb-2 [&_h3]:mt-6 [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-fg [&_li]:ml-5 [&_li]:list-disc [&_p]:mb-4"
+          className="max-w-[74ch] border-t-2 border-border pt-10 text-base leading-relaxed text-fg-body [&_h2]:mb-2 [&_h2]:mt-6 [&_h2]:text-xl [&_h2]:font-medium [&_h2]:text-fg [&_li]:ml-5 [&_li]:list-disc [&_p]:mb-4"
           dangerouslySetInnerHTML={{ __html: entry.contentHtml }}
         />
       </div>

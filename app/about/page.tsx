@@ -44,9 +44,9 @@ export default function AboutPage() {
               <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-fg-muted">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <div className="mt-4 text-xl font-medium tracking-[-0.02em]">
+              <h3 className="mt-4 text-xl font-medium tracking-[-0.02em]">
                 {item.title}
-              </div>
+              </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-fg-muted text-pretty">
                 {item.body}
               </p>

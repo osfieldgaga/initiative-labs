@@ -124,9 +124,9 @@ export default function Home() {
           <div className="font-mono text-eyebrow uppercase tracking-[0.16em] text-accent">
             01 — Scope
           </div>
-          <p className="mt-10 max-w-[24ch] text-statement text-fg text-pretty">
+          <h2 className="mt-10 max-w-[24ch] text-statement text-fg text-pretty">
             {copy.home.scopeStatement}
-          </p>
+          </h2>
           <p className="mt-7 max-w-[60ch] text-lg leading-relaxed text-fg-muted text-pretty">
             {copy.home.scopeBody}
           </p>
@@ -145,9 +145,9 @@ export default function Home() {
                 <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-fg-muted">
                   {pillar.label}
                 </div>
-                <div className="mt-3.5 text-xl font-medium tracking-[-0.015em]">
+                <h3 className="mt-3.5 text-xl font-medium tracking-[-0.015em]">
                   {pillar.title}
-                </div>
+                </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-fg-muted">
                   {pillar.body}
                 </p>

@@ -91,7 +91,10 @@ export default function ContributePage() {
               <span className="text-fg">4.</span> Write the entry body
               underneath in plain markdown — headings, lists, and paragraphs
               all render. Rough, in-progress notes are the point; it doesn&apos;t
-              need to read like a finished write-up.
+              need to read like a finished write-up. If you use headings,
+              start at <code className="font-mono text-fg">##</code> rather
+              than <code className="font-mono text-fg">#</code> — the entry
+              title above is already the page&apos;s top-level heading.
             </li>
             <li>
               <span className="text-fg">5.</span> Open a pull request.

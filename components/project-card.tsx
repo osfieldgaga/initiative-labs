@@ -22,9 +22,9 @@ export function ProjectCard({
             <StatusBadge status={project.status} />
             <LicenseBadge license={project.license} />
           </div>
-          <div className="mt-5 text-3xl font-medium tracking-[-0.025em] text-fg">
+          <h3 className="mt-5 text-3xl font-medium tracking-[-0.025em] text-fg">
             {project.title}
-          </div>
+          </h3>
           <p className="mt-3 max-w-[52ch] text-base leading-relaxed text-fg-muted">
             {project.summary}
           </p>
@@ -50,9 +50,9 @@ export function ProjectCard({
         <StatusBadge status={project.status} />
         <LicenseBadge license={project.license} />
       </div>
-      <div className="mt-[30px] text-[27px] font-medium tracking-[-0.025em] text-fg">
+      <h3 className="mt-[30px] text-[27px] font-medium tracking-[-0.025em] text-fg">
         {project.title}
-      </div>
+      </h3>
       <p className="mt-3.5 max-w-[44ch] text-[15px] leading-relaxed text-fg-muted">
         {project.summary}
       </p>

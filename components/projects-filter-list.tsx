@@ -44,6 +44,7 @@ export function ProjectsFilterList({ projects }: { projects: ProjectMeta[] }) {
           );
         })}
       </div>
+      <h2 className="sr-only">Projects</h2>
       <div className="mt-[60px] border-t-2 border-border">
         {visible.map((project) => (
           <ProjectCard key={project.slug} project={project} variant="list" />
