@@ -36,7 +36,8 @@ external services.
 Projects and lab notebook entries are markdown files with frontmatter under
 `/content`. Adding one is "add a markdown file" — see
 [CONTRIBUTING.md](CONTRIBUTING.md) for the exact steps and frontmatter
-fields. In brief:
+fields, or the [Content Playbook](https://claude.ai/code/artifact/c869f246-5bf5-4e63-ad44-1b9e8f67b88d)
+for a walkthrough with full examples and a field reference. In brief:
 
 ```
 content/
