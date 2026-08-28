@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -8,6 +9,18 @@ import {
 
 export function generateStaticParams() {
   return getAllNotebookEntries().map((entry) => ({ slug: entry.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/notebook/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = getNotebookEntryBySlug(slug);
+  if (!entry) return {};
+  return {
+    title: entry.title,
+    description: entry.excerpt,
+  };
 }
 
 export default async function NotebookEntryDetailPage({

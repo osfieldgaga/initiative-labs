@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { getAllProjects } from "@/lib/content";
 import { copy } from "@/lib/copy";
 import { ProjectsFilterList } from "@/components/projects-filter-list";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Every project from Initiative Labs — active, work-in-progress, shelved, and archived.",
+};
 
 export default function ProjectsIndexPage() {
   const projects = getAllProjects();

@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/button";
 import { LabelSection } from "@/components/label-section";
 import { copy } from "@/lib/copy";
 import { EMAIL, GITHUB_URL } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "The mission and manifesto behind Initiative Labs.",
+};
 
 export default function AboutPage() {
   return (

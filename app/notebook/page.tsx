@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllNotebookEntries, getProjectBySlug } from "@/lib/content";
 import { copy } from "@/lib/copy";
+
+export const metadata: Metadata = {
+  title: "Lab Notebook",
+  description:
+    "A chronological build journal from Initiative Labs — decisions, measurements, and the things that didn't work.",
+};
 
 export default function NotebookFeedPage() {
   const entries = getAllNotebookEntries();

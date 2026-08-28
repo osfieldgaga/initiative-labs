@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { LabelSection } from "@/components/label-section";
+
+export const metadata: Metadata = {
+  title: "Contribute",
+  description:
+    "How to contribute to a project, add a lab notebook entry, or propose code changes to Initiative Labs.",
+};
 
 const NOTEBOOK_FRONTMATTER_EXAMPLE = `---
 title: "Entry title"
