@@ -6,37 +6,37 @@
  */
 export const copy = {
   home: {
-    heroEyebrow: "Lorem ipsum · Dolor sit",
+    heroEyebrow: "Open source intelligence",
     heroHeadline:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Physical intelligence built in the open.",
     heroSubhead:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam quis nostrud exercitation.",
+      "Real projects and research, built in public, with open source hardware and software. Build it yourself or improve it, and share your work with the world.",
     scopeStatement:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "We aim at giving physical objects a sense of what is around them, and what to do with that information.",
     scopeBody:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident.",
+      "All projects are either in progress or done, but can always be improved. Contributions keep the world going, log books for each project will be available to give insights on the prcecss and the decisions made along the way.",
     scopePillars: [
       {
-        label: "Lorem",
-        title: "Ipsum dolor sit amet consectetur",
-        body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
+        label: "Physical AI",
+        title: "Make your creations more aware",
+        body: "Be the designer, and let your creations be the thinker. Build intelligence into your physical objects, and give them a sense of what is around them.",
       },
       {
-        label: "Ipsum",
-        title: "Dolor sit amet consectetur adipiscing",
-        body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.",
+        label: "Electronics & Embedded programming",
+        title: "Hardware made for the software",
+        body: "A good design needs hardware that can support...",
       },
       {
-        label: "Dolor",
+        label: "Robotics & Mechatronics",
         title: "Sit amet consectetur adipiscing elit",
         body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
       },
     ],
-    projectsHeading: "Lorem ipsum dolor sit, amet consectetur.",
-    notebookHeading: "Adipiscing elit sed do eiusmod tempor.",
-    contributeHeadline: "Incididunt ut labore, et dolore magna.",
+    projectsHeading: "What we are building",
+    notebookHeading: "What we are thinking about while building",
+    contributeHeadline: "And yes, you can just do things. Contribute.",
     contributeBody:
-      "Aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Improvements, new stuff or just implementing a project for the sake of learning. Feel free, do it, and if you need help, reach out.",
   },
   projects: {
     subhead:
