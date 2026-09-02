@@ -15,7 +15,7 @@ export function MediaPlaceholder({
       className={`flex items-center justify-center border border-dashed border-border bg-bg-raised ${className}`}
     >
       <span className="font-mono text-label uppercase tracking-[0.14em] text-fg-faint">
-        {caption ?? "Image placeholder"}
+        {caption ?? "Image placeholder, use your imagination."}
       </span>
     </div>
   );
