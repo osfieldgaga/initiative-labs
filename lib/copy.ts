@@ -6,85 +6,85 @@
  */
 export const copy = {
   home: {
-    heroEyebrow: "Open source intelligence",
+    heroEyebrow: "Physical AI",
     heroHeadline:
-      "Physical intelligence built in the open.",
+      "Physical intelligence, built in the open.",
     heroSubhead:
-      "Real projects and research, built in public, with open source hardware and software. Build it yourself or improve it, and share your work with the world.",
+      "Sensors, control systems, actuation. Released as they're built, licensed so you can take them.",
     scopeStatement:
-      "We aim at giving physical objects a sense of what is around them, and what to do with that information.",
+      "We aim to give physical objects a sense of what is around them, and what to do with that information.",
     scopeBody:
-      "All projects are either in progress or done, but can always be improved. Contributions keep the world going, log books for each project will be available to give insights on the prcecss and the decisions made along the way.",
+      "Electronics and robotics are the means, not the point. Every project here has to close the loop between the world and a decision.",
     scopePillars: [
       {
-        label: "Physical AI",
-        title: "Make your creations more aware",
-        body: "Be the designer, and let your creations be the thinker. Build intelligence into your physical objects, and give them a sense of what is around them.",
+        label: "Sense",
+        title: "Sensors, CAN buses, tactile arrays",
+        body: "Turning the world into signal worth trusting. Timestamped, sourced, fast enough to act on.",
       },
       {
-        label: "Electronics & Embedded programming",
-        title: "Hardware made for the software",
-        body: "A good design needs hardware that can support...",
+        label: "Decide",
+        title: "Models and control systems",
+        body: "Turning those signals into a choice, in the time budget the hardware allows.",
       },
       {
-        label: "Robotics & Mechatronics",
-        title: "Sit amet consectetur adipiscing elit",
-        body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+        label: "Act",
+        title: "Actuation, results or consequences",
+        body: "It either works or it doesn't.",
       },
     ],
-    projectsHeading: "What we are building",
-    notebookHeading: "What we are thinking about while building",
-    contributeHeadline: "And yes, you can just do things. Contribute.",
+    projectsHeading: "What we are building.",
+    notebookHeading: "What we are thinking about while building.",
+    contributeHeadline: "And yes, you can just do things. Fork it, build it, break it.",
     contributeBody:
-      "Improvements, new stuff or just implementing a project for the sake of learning. Feel free, do it, and if you need help, reach out.",
+      "Fix a bug, build the next milestone, or just implement something shelved to learn how it works. Do it, and if you get stuck, reach out.",
   },
   projects: {
     subhead:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "All projects, whether active or not. Contribute or unshelf it if it inspires you.",
   },
   notebook: {
     subhead:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt, ut labore et dolore magna aliqua.",
+      "Ongoing notes and updates on projects. They cover design decisions, or just thoughts along the way.",
   },
   about: {
     eyebrow: "Manifesto",
     headline:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "Ideas about physical intelligence get built here, not theorised.",
     mission: {
       label: "Mission",
       paragraphs: [
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor.",
-        "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Initiative Labs is an open-source lab; not a physical lab, and not yet a company. It's where I build side projects at the intersection of physical intelligence, electronics, and robotics.",
+        "Everything ships in public, work-in-progress and all, under permissive licenses (MIT or Apache-2.0 by default) so anyone can pick up where I left off. That includes the projects that stalled. A shelved build with honest notes is more useful to the next person than a polished summary of a finished one.",
       ],
     },
     throughline: {
       label: "The throughline",
       paragraphs: [
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo.",
-        "Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo, nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+        "Physical intelligence is the scope: embodied systems that sense, decide, and act in the physical world.",
+        "Electronics and robotics show up constantly, but never as ends in themselves. The test for whether something belongs here is whether it closes a loop between the world and a decision. A sensor that only logs, or a mechanism that only moves on command, is a component. Interesting, but not the work.",
       ],
     },
     howItWorks: {
       label: "How this site works",
       items: [
         {
-          title: "Lorem ipsum dolor sit amet",
-          body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          title: "Status is stated",
+          body: "Active, WIP, Shelved, or Archived — on every card and every page. No project is presented as finished when it isn't.",
         },
         {
-          title: "Ut enim ad minima veniam",
-          body: "Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+          title: "License is visible",
+          body: "Permissive by default, shown next to the status rather than buried in a repo footer.",
         },
         {
-          title: "Neque porro quisquam est",
-          body: "Qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit, sed quia non numquam eius modi tempora.",
+          title: "Dead ends stay up",
+          body: "Abandoned work keeps its page and its notes. Deleting it would hide the most useful part.",
         },
         {
-          title: "At vero eos et accusamus",
-          body: "Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
+          title: "Notes over write-ups",
+          body: "The notebook is written during the build, not after. It's rougher on purpose.",
         },
       ],
     },
-    closingHeadline: "Lorem ipsum dolor sit amet, consectetur.",
+    closingHeadline: "Get in touch or just take the code.",
   },
 } as const;
