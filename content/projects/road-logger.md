@@ -6,19 +6,9 @@ license: "MIT"
 techTags: ["Python", "OpenCV", "SocketCAN"]
 repoUrl: "https://github.com/example/lorem-ipsum-rover"
 docsUrl: "https://example.com/docs/lorem-ipsum-rover"
-summary: "A Raspberry Pi-based logger to record data for tuning self-driving control algorithm"
+summary: "A Raspberry Pi-based logger to record data for tuning a self-driving control algorithm"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat.
+The main purpose of this project is to provide a simple, almost forgettable device that will collect data from every drive cycle, making it useful for open-loop control or as a baseline for tuning a close loop control. The data collected here can be used as ground truth and can provide a solid background for testing a controller.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab
-illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-explicabo.
+Unlike the widely available dashcam footage that can be found online, this project aims to provide enriched data by adding IMU data and CAN logs, all timestamped to every frame collected by the vision system. 
