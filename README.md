@@ -64,7 +64,7 @@ app/              routes (App Router)
 components/       shared UI primitives
 content/          projects/ and notebook/ markdown
 lib/              content loaders, types, copy, shared constants
-public/           static assets (mark, OG image)
+public/           static assets (mark, OG image, notebook images in images/)
 ```
 
 ## License

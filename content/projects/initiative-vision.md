@@ -1,6 +1,6 @@
 ---
 title: "Initiative Vision 1"
-slug: "initiative-vision-v1"
+slug: "initiative-vision"
 status: "Active"
 license: "MIT"
 techTags: ["Python", "OpenCV", "SocketCAN"]

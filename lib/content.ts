@@ -2,7 +2,7 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { marked } from "marked";
+import { Marked } from "marked";
 import type {
   NotebookEntry,
   NotebookEntryMeta,
@@ -28,8 +28,18 @@ function readMarkdownFiles(dir: string) {
     .map((file) => matter(fs.readFileSync(path.join(dir, file), "utf8")));
 }
 
-function renderHtml(markdown: string): string {
-  return marked.parse(markdown, { async: false });
+// Markdown references images as `../../public/images/foo.png` (relative to
+// content/*/, so editor/GitHub previews work); public/ is served at the site root.
+const markdown = new Marked({
+  walkTokens(token) {
+    if (token.type === "image") {
+      token.href = token.href.replace(/^(\.\.\/)+public\//, "/");
+    }
+  },
+});
+
+function renderHtml(source: string): string {
+  return markdown.parse(source, { async: false });
 }
 
 /** Plain-text preview of a markdown body — strips formatting, doesn't parse to HTML. */

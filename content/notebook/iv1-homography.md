@@ -1,5 +1,5 @@
 ---
-title: "Lane Line Detection Part 1"
+title: "Homographic Transformation"
 date: "2026-09-30"
 projectTag: "initiative-vision"
 slug: "Homography"

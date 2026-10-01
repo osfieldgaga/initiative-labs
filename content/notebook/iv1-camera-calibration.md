@@ -7,15 +7,15 @@ slug: "camera-calibration"
 
 Using MATLAB, taking a bunch of pictures with a 12x6 checkerboard with pattern of size 56mm
 
-![Calibration App - MATLAB](../images/img1.png)
+![Calibration App - MATLAB](../../public/images/img1.png)
 
 Image size choosen as 1280x1280
 
 Overall Mean Error at 0.47 pixels, below 1 pixels so good enough for us
 
-![Overall Mean Error](../images/Screenshot%20From%202026-09-25%2018-27-43.png)
+![Overall Mean Error](../../public/images/Screenshot%20From%202026-09-25%2018-27-43.png)
 
-![Camera-centric vue](../images/Screenshot%20From%202026-09-25%2018-29-37.png)
+![Camera-centric vue](../../public/images/Screenshot%20From%202026-09-25%2018-29-37.png)
 
 ## Camera parameters
 
