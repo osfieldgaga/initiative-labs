@@ -1,12 +1,12 @@
 ---
-title: "Road Logger"
-slug: "road-logger"
+title: "Initiative Vision 1"
+slug: "initiative-vision-v1"
 status: "Active"
 license: "MIT"
 techTags: ["Python", "OpenCV", "SocketCAN"]
-repoUrl: "https://github.com/example/lorem-ipsum-rover"
-docsUrl: "https://example.com/docs/lorem-ipsum-rover"
-summary: "A Raspberry Pi-based logger to record data for tuning a self-driving control algorithm"
+repoUrl: ""
+docsUrl: ""
+summary: "A Raspberry Pi-based logger to record and process ground truth data for tuning self-driving control algorithm"
 ---
 
 The main purpose of this project is to provide a simple, almost forgettable device that will collect data from every drive cycle, making it useful for open-loop control or as a baseline for tuning a close loop control. The data collected here can be used as ground truth and can provide a solid background for testing a controller.
